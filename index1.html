@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Labyrinth Themes</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <div class="canvas">
+
+    <div class="theme t1">
+      <h1> </h1>
+      <p>   "He was awakened by the sun high overhead. He was not astonished to find that his wounds had healed; he closed his pallid eyes and slept, not through weakness of flesh but through determination of will. He knew that this temple was the place required for his invincible intent; he knew that the incessant trees had not succeeded in strangling the ruins of another propitious temple downstream which had once belonged to gods now burned and dead; he knew that his immediate obligation was to dream. Toward midnight he was awakened by the inconsolable shriek of a bird. Tracks of bare feet, some figs and a jug warned him that the men of the region had been spying respectfully on his sleep, soliciting his protection or afraid of his magic. "
+
+
+</p>
+    </div>
+
+    <div class="theme t2">
+      <h1> </h1>
+      <p>"At first, his dreams were chaotic; then in a short while they became dialectic in nature. The stranger dreamed that he was in the center of a circular amphitheater which was more or less the burnt temple; clouds of taciturn students filled the tiers of seats; the faces of the farthest ones hung at a distance of many centuries and as high as the stars, but their features were completely precise. The man lectured his pupils on anatomy, cosmography, and magic: the faces listened anxiously and tried to answer understandingly, as if they guessed the importance of that examination which would redeem one of them from his condition of empty illusion and interpolate him into the real world." </p>
+    </div>
+
+    <div class="theme t3">
+      <h1> </h1>
+      <p>"After nine or ten nights he understood with a certain bitterness that he could expect nothing from those pupils who accepted his doctrine passively, but that he could expect something from those who occasionally dared to oppose him. The former group, although worthy of love and affection, could not ascend to the level of individuals; the latter pre-existed to a slightly greater degree. One afternoon (now afternoons were also given over to sleep, now he was only awake for a couple hours at daybreak) he dismissed the vast illusory student body for good and kept only one pupil. He was a taciturn, sallow boy, at times intractable, and whose sharp features resembled of those of his dreamer." </p>
+    </div>
+
+    <div class="theme t4">
+      <h1> </h1>
+      <p>"In the Gnostic cosmosgonies, demiurges fashion a red Adam who cannot stand; as a clumsy, crude and elemental as this Adam of dust was the Adam of dreams forged by the wizard's nights. One afternoon, the man almost destroyed his entire work, but then changed his mind. (It would have been better had he destroyed it.) When he had exhausted all supplications to the deities of earth, he threw himself at the feet of the effigy which was perhaps a tiger or perhaps a colt and implored its unknown help. That evening, at twilight, he dreamt of the statue." </p>
+    </div>
+
+    <div class="theme t5">
+      <h1> </h1>
+      <p>"His victory and peace became blurred with boredom. In the twilight times of dusk and dawn, he would prostrate himself before the stone figure, perhaps imagining his unreal son carrying out identical rites in other circular ruins downstream; at night he no longer dreamed, or dreamed as any man does. His perceptions of the sounds and forms of the universe became somewhat pallid: his absent son was being nourished by these diminution of his soul. The purpose of his life had been fulfilled; the man remained in a kind of ecstasy. After a certain time, which some chronicles prefer to compute in years and others in decades, two oarsmen awoke him at midnight; he could not see their faces, but they spoke to him of a charmed man in a temple of the North, capable of walking on fire without burning himself. The wizard suddenly remembered the words of the god. He remembered that of all the creatures that people the earth, Fire was the only one who knew his son to be a phantom. This memory, which at first calmed him, ended by tormenting him. He feared lest his son should meditate on this abnormal privilege and by some means find out he was a mere simulacrum. Not to be a man, to be a projection of another man's dreams--what an incomparable humiliation, what madness! Any father is interested in the sons he has procreated (or permitted) out of the mere confusion of happiness; it was natural that the wizard should fear for the future of that son whom he had thought out entrail by entrail, feature by feature, in a thousand and one secret nights."</p>
+    </div>
+
+  </div>
+
+<script>
+   
+    const themes = [
+        { className: 't1', link: 'file:///Users/seokjinnie/Desktop/home%20page/index.html' },
+        { className: 't2', link: 'file:///Users/seokjinnie/Desktop/home%20page/index.html' },
+        { className: 't3', link: 'file:///Users/seokjinnie/Desktop/home%20page/index.html' },
+        { className: 't4', link: 'file:///Users/seokjinnie/Desktop/home%20page/index.html' },
+        { className: 't5', link: 'file:///Users/seokjinnie/Desktop/home%20page/index.html' },
+    ];
+
+   
+    const randomIndex = Math.floor(Math.random() * themes.length);
+    const selectedTheme = themes[randomIndex];
+
+
+    const selectedElement = document.querySelector(`.${selectedTheme.className}`);
+    const originalText = selectedElement.querySelector('p').textContent;
+    
+
+    selectedElement.querySelector('p').innerHTML = `<a href="${selectedTheme.link}" target="_blank">${originalText}</a>`;
+</script>
+</body>
+</html>

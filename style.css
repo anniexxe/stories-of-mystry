@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Georgia", serif;
+    color: white;
+    background: linear-gradient(135deg, #07070c, #0e0e18, #0a0a14);
+    background-size: 400% 400%;
+    animation: fogMove 25s ease infinite;
+}
+
+@keyframes fogMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+    to { text-shadow: 0 0 30px rgba(255,255,255,0.6); }
+}
+
+.button {
+    position: absolute;
+    padding: 18px 60px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.03);
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(6px);
+    white-space: nowrap;
+}
+
+.button:hover {
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 30px rgba(255,255,255,0.5);
+    transform: scale(1.1);
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}

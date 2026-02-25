@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Georgia", serif;
+  color: #e8e4dc;
+
+
+  background: 
+    radial-gradient(circle at 60% 30%, rgba(255, 220, 160, 0.304), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(47, 47, 47, 0.6), transparent 60%),
+    linear-gradient(180deg, #50453a 0%, #39342d 50%, #433e39 100%);
+}
+
+
+
+
+
+.stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+
+
+.fragment {
+  position: absolute;
+  max-width: 420px;
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.5;
+  cursor: pointer;
+  animation: drift linear infinite;
+  transition: all 0.6s ease;
+}
+
+.fragment:hover {
+  font-size: 20px;
+  opacity: 1;
+  z-index: 10;
+}
+
+@keyframes drift {
+  from { transform: translate(0, 0); }
+  to { transform: translate(var(--dx), var(--dy)); }
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.02) 0px,
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.02) 0px,
+      rgba(0,0,0,0.02) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+
+  opacity: 0.4;
+}
