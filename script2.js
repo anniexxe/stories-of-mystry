@@ -77,5 +77,5 @@ const clickableFragment = fragments[randomIndex];
 clickableFragment.style.cursor = "pointer";
 
 clickableFragment.addEventListener("click", () => {
-  window.location.href = "file:///Users/seokjinnie/Desktop/home%20page/index.html";
+  window.location.href = "index.html";
 });
